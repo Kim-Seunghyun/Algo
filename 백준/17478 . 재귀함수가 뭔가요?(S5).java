@@ -28,7 +28,7 @@ public class Main {
 				sb.append("____");
 			sb.append(t[2]).append("\n");
 		}
-		if (cnt == n) {
+		if (cnt == n) {	//가장마지막 실행은 3개만 
 			for (int i = 0; i < 3; i++) {
 				for (int j = 0; j < cnt; j++)
 					sb.append("____");
