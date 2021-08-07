@@ -18,17 +18,17 @@ public class Main {
 		for (int i = 0; i < N; i++) {
 			s = br.readLine();
 			st = new StringTokenizer(s);
-			if (Integer.parseInt(st.nextToken()) == 1) {
+			if (Integer.parseInt(st.nextToken()) == 1) {	//1은 boy
 				int num = Integer.parseInt(st.nextToken());
 				boyMethod(num, switchCondition);
-			} else {
+			} else {					//2는 girl
 				int num = Integer.parseInt(st.nextToken());
 				girlMethod(num, switchCondition);
 			}
 		}
 		for (int i = 1; i < switchCondition.length; i++) {
 			System.out.print(switchCondition[i] + " ");
-			if (i % 20 == 0)
+			if (i % 20 == 0)	//20개 넘어가면 줄바꿈
 				System.out.println();
 		}
 	}
@@ -38,25 +38,27 @@ public class Main {
 			switchCondition[num] = 0;
 		else if (switchCondition[num] == 0)
 			switchCondition[num] = 1;
+		//현재 위치 값 부터 바꾸기
 		int x = num - 1, y = num + 1;
 		while (true) {
 			if (x <= 0 || y >= switchCondition.length)
 				break;
-			if (switchCondition[x] == switchCondition[y]) {
+			//왼쪽 오른쪽 중 더 갈 수 없다면 break
+			if (switchCondition[x] == switchCondition[y]) {	//좌우가 같다면 바꾸기
 				if (switchCondition[x] == 0) {
 					switchCondition[x] = switchCondition[y] = 1;
 				} else if (switchCondition[x] == 1) {
 					switchCondition[x] = switchCondition[y] = 0;
 				}
 			} else if (switchCondition[x] != switchCondition[y])
-				break;
+				break;	//다르면 break
 			x--;
 			y++;
 		}
 	}
 
 	private static void boyMethod(int num, int[] switchCondition) {
-		int i = num;
+		int i = num;	//배수 모두 바꾸기
 		while (i < switchCondition.length) {
 			if (switchCondition[i] == 1)
 				switchCondition[i] = 0;
