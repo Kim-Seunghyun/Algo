@@ -18,18 +18,18 @@ public class M1210 {
 					arr[j][k] = Integer.parseInt(st.nextToken());
 				}
 			}
+			//입력완료
 			for (int j = 0; j < 100; j++)
 				if (arr[99][j] == 2)
 					flag = j;
-
+			//가장 밑줄에서 당첨을 찾으면 표시
 			for (int j = 99, k = flag; j >= 0; j--) {
 				if (j == 0) {
 					sb.append(k).append("\n");
 					break;
-				}
-				boolean cross = false;
+				}//밑에서부터 시작해서 맨위에 도착할때까지
 				int left = k - 1, right = k + 1;
-				if (left >= 0 && cross == false) {
+				if (left >= 0) {//왼쪽으로 갈 수 있다면
 					if (arr[j][left] == 1) {
 						if (left != 0)
 							while (arr[j][left - 1] == 1) {
@@ -37,11 +37,10 @@ public class M1210 {
 								if (left == 0)
 									break;
 							}
-						cross = true;
 						k = left;
 					}
 				}
-				if (right <= 99 && cross == false) {
+				else if (right <= 99) {//오른쪽으로 갈 수 있다면
 					if (arr[j][right] == 1) {
 						if (right != 99)
 							while (arr[j][right + 1] == 1) {
@@ -49,11 +48,9 @@ public class M1210 {
 								if (right == 99)
 									break;
 							}
-						cross = true;
 						k = right;
 					}
 				}
-				cross = false;
 			}
 		}
 		System.out.println(sb.toString());
