@@ -18,17 +18,18 @@ public class M1225 {
 			for (int j = 0; j < 8; j++) {
 				queue.add(Integer.parseInt(st.nextToken()));
 			}
+			//입력완료
 			int cnt = 1;
 			while (true) {
 				int tmp = queue.poll() - cnt;
-				if (tmp <= 0) {
+				if (tmp <= 0) {	//뽑은 수가 0이하가 된다면 break
 					tmp = 0;
 					queue.add(tmp);
 					break;
 				}
 				queue.add(tmp);
 				cnt++;
-				if (cnt >= 6)
+				if (cnt >= 6)	//차감시키는 수가 6이상되면 다시 1로 초기화
 					cnt = cnt % 5;
 			}
 			while (!queue.isEmpty()) {
