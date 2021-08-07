@@ -24,6 +24,7 @@ public class Solution {
 			sb.append("#").append(i).append(" ");
 			int x = 0, y = 0;
 			int dir = 0;
+			//먼저 탱크의 위치와 방향부터 설정
 			for (int h = 0; h < H; h++) {
 				for (int w = 0; w < W; w++) {
 					if (map[h][w] == '>' || map[h][w] == '<' || map[h][w] == 'v' || map[h][w] == '^') {
@@ -38,7 +39,7 @@ public class Solution {
 						y = h;
 						x = w;
 						break;
-					}
+					}	
 				}
 			}
 			// 탱크 찾기랑 방향잡기 완료
