@@ -55,7 +55,7 @@ public class Solution {
                 return reculFind(direction, arr, N, nextY, nextX, cnt + 1);
             }
         }
-        return cnt;
+        return cnt; //아무곳도 못가면 1 리턴
     }
  
 }
