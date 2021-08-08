@@ -3,6 +3,7 @@
 
 
 <hr/>
-## 심심할 때 고민
+심심할 때 고민
+=============
 
-*[알약](https://www.acmicpc.net/problem/4811) 배열을 너무 크게 잡고 했음.
+  * [알약](https://www.acmicpc.net/problem/4811) 배열을 너무 크게 잡고 했음.
