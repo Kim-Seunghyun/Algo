@@ -31,7 +31,7 @@ public class BJ1003 {
 		}
 		if (arr[n][0] != 0 || arr[n][1] != 0) {
 			return arr[n];
-		}
+		}	//기존 저장해둔값 있으면 그거 리턴
 		int x[] = fibo(n - 2);
 		int y[] = fibo(n - 1);
 		arr[n][0] = x[0] + y[0];
