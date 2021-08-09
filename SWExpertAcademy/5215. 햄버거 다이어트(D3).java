@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class M5215 {
-	static int res;
+	static int res;	//최종 점수
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
